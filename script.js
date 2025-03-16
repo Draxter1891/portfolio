@@ -1,25 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("video").playbackRate = 0.5; // 0.5 = 50% speed
+  document.querySelector("video").playbackRate = 0.5;
 });
 
+// Toggle Mobile Menu
+function toggleMenu() {
+  let nav = document.getElementById("mobile-nav");
+  let hamburger = document.querySelector(".hamburger");
+
+  nav.classList.toggle("active");
+
+  // Change hamburger icon when toggling
+  if (nav.classList.contains("active")) {
+    hamburger.innerHTML = "✖"; // Close icon
+  } else {
+    hamburger.innerHTML = "☰"; // Menu icon
+  }
+}
+
+// Contact Form Submission
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
 
-    if (name === "" || email === "" || message === "") {
+    if (!name || !email || !message) {
       alert("Please fill out all fields.");
       return;
     }
 
-    // Disable submit button to prevent double submission
     document.getElementById("submit-btn").disabled = true;
 
-    sendMail(); // Call function to send mail
+    sendMail();
   });
 
 function sendMail() {
@@ -29,33 +44,20 @@ function sendMail() {
     message: document.getElementById("message").value,
   };
 
-  const serviceID = "service_r3p6wa2"; // Your EmailJS Service ID
-  const templateID = "template_bgil9qm"; // Your EmailJS Template ID
-
   emailjs
-    .send(serviceID, templateID, params)
-    .then((res) => {
-      console.log("Email Sent: ", res);
+    .send("service_r3p6wa2", "template_bgil9qm", params)
+    .then(() => {
       alert("Your message was sent successfully!");
-
-      // Reset form after success
       document.getElementById("contact-form").reset();
-
-      // Re-enable the submit button after 2 seconds
-      setTimeout(() => {
-        document.getElementById("submit-btn").disabled = false;
-      }, 2000);
+      document.getElementById("submit-btn").disabled = false;
     })
-    .catch((err) => {
-      console.log("Error: ", err);
+    .catch(() => {
       alert("Something went wrong. Please try again.");
-
-      // Re-enable submit button in case of error
       document.getElementById("submit-btn").disabled = false;
     });
 }
 
-// ---- PROJECT AUTO-SCROLL FUNCTION ----
+// Project Auto-Scroll Function
 let index = 0;
 const projectsWrapper = document.querySelector(".projects-wrapper");
 const totalProjects = document.querySelectorAll(".project").length;
@@ -63,7 +65,7 @@ const projectsPerView = 3;
 
 function autoScrollProjects() {
   index++;
-  if (index > totalProjects - 1) {
+  if (index > totalProjects - projectsPerView) {
     index = 0;
   }
   let translateValue = -index * (100 / projectsPerView) + "%";

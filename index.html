@@ -30,66 +30,53 @@
       <div class="overlay"></div>
     </div>
 
-    <!-- Sticky Navbar -->
+    <!-- Sticky Navbar with Hamburger -->
     <header>
-      <h2><a href="#hero" class="logo fade-in">Rishabh Tripahi.</a></h2>
-      <div class="nav fade-in delay">
+      <a href="#" class="logo">Rishabh Tripahi.</a>
+      <nav class="nav" id="mobile-nav">
         <a href="#about">About</a>
-        <a href="#projects">Project</a>
-        <a href="#contact">Contact me</a>
-      </div>
-      <label for="check">
-        <i class="fas fa-bars menu-btn"></i>
-        <i class="fas fa-times close-btn"></i>
-      </label>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Me</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </header>
 
-    <!-- Hero Section (Starts after Video) -->
-    <section id="hero">
+    <!-- Hero Section with Buttons -->
+    <section id="hero" class="blur-section">
       <h2>Welcome to My Portfolio</h2>
       <p>Full Stack Developer | Web Enthusiast</p>
       <div class="button-container">
         <button
           onclick="window.open('https://github.com/Draxter1891', '_blank')"
         >
-          <div class="single-button">
-            <img
-              src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png&color=000000"
-              style="height: 20px"
-              alt="github-img"
-            />
-            <p>github</p>
-          </div>
+          <img
+            src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+            alt="GitHub"
+          />
+          GitHub
         </button>
         <button
           onclick="window.open('https://linkedin.com/in/tripathi-rishabh', '_blank')"
         >
-          <div class="single-button">
-            <img
-              src="https://img.icons8.com/?size=100&id=85348&format=png&color=000000"
-              alt="linkedin-img"
-              style="height: 20px"
-            />
-            <p>LinkedIn</p>
-          </div>
+          <img
+            src="https://img.icons8.com/?size=100&id=85348&format=png"
+            alt="LinkedIn"
+          />
+          LinkedIn
         </button>
         <button
           onclick="window.open('https://drive.google.com/file/d/1I47WDcfyiEbKusfXff-2p3V2Nh149yPw/view?usp=sharing','_blank')"
         >
-          <div class="single-button">
-            <img
-              src="https://img.icons8.com/?size=100&id=sXUnPq4XYR1D&format=png&color=000000"
-              alt="download-Cv-icon"
-              style="height: 20px"
-            />
-            <p>Resume</p>
-          </div>
+          <img
+            src="https://img.icons8.com/?size=100&id=sXUnPq4XYR1D&format=png"
+            alt="Resume"
+          />
+          Resume
         </button>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <section id="about" class="blur-section">
       <h2>About Me</h2>
       <p>
         I am a passionate Full Stack Developer with experience in modern web
@@ -97,44 +84,24 @@
       </p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="blur-section">
       <h2>My Projects</h2>
       <div class="projects-container">
         <div class="projects-wrapper">
-          <div class="project">
-            Project 1<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 2<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 3<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 4<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 5<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 6<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 7<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 8<br /><span>this is description...</span>
-          </div>
-          <div class="project">
-            Project 9<br /><span>this is description...</span>
-          </div>
+          <div class="project">Project 1<br /><span>Description...</span></div>
+          <div class="project">Project 2<br /><span>Description...</span></div>
+          <div class="project">Project 3<br /><span>Description...</span></div>
+          <div class="project">Project 4<br /><span>Description...</span></div>
+          <div class="project">Project 5<br /><span>Description...</span></div>
+          <div class="project">Project 6<br /><span>Description...</span></div>
+          <div class="project">Project 7<br /><span>Description...</span></div>
+          <div class="project">Project 8<br /><span>Description...</span></div>
+          <div class="project">Project 9<br /><span>Description...</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="blur-section">
       <h2>Contact Me</h2>
       <form id="contact-form">
         <input type="text" id="name" placeholder="Your Name" />
