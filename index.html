@@ -32,55 +32,75 @@
 
     <!-- Sticky Navbar with Hamburger -->
     <header>
-      <a href="#" class="logo">Rishabh Tripahi.</a>
+      <a href="#" class="logo">RISHABH TRIPATHI.</a>
+      <button class="hamburger">☰</button>
       <nav class="nav" id="mobile-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact Me</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </header>
 
     <!-- Hero Section with Buttons -->
     <section id="hero" class="blur-section">
       <h2>Welcome to My Portfolio</h2>
-      <p>Full Stack Developer | Web Enthusiast</p>
+      <p>Go through these links to know more about me.</p>
       <div class="button-container">
-        <button
-          onclick="window.open('https://github.com/Draxter1891', '_blank')"
-        >
+        <a href="https://github.com/Draxter1891" target="_blank" class="btn">
           <img
             src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
             alt="GitHub"
           />
           GitHub
-        </button>
-        <button
-          onclick="window.open('https://linkedin.com/in/tripathi-rishabh', '_blank')"
+        </a>
+
+        <a
+          href="https://linkedin.com/in/tripathi-rishabh"
+          target="_blank"
+          class="btn"
         >
           <img
             src="https://img.icons8.com/?size=100&id=85348&format=png"
             alt="LinkedIn"
           />
           LinkedIn
-        </button>
-        <button
-          onclick="window.open('https://drive.google.com/file/d/1I47WDcfyiEbKusfXff-2p3V2Nh149yPw/view?usp=sharing','_blank')"
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1I47WDcfyiEbKusfXff-2p3V2Nh149yPw/view?usp=sharing"
+          target="_blank"
+          class="btn"
         >
           <img
             src="https://img.icons8.com/?size=100&id=sXUnPq4XYR1D&format=png"
             alt="Resume"
           />
           Resume
-        </button>
+        </a>
       </div>
     </section>
 
     <section id="about" class="blur-section">
       <h2>About Me</h2>
       <p>
-        I am a passionate Full Stack Developer with experience in modern web
-        technologies.
+        I’m a passionate developer who loves building things that make life
+        easier and more efficient. With a strong foundation in full-stack
+        development, I enjoy working with languages and frameworks like C++,
+        JavaScript, React Native, and Node.js. I’m especially drawn to creating
+        seamless, user-friendly applications that solve real problems.
+      </p>
+      <p>
+        I’ve worked on projects like a fully functional e-commerce app and a
+        food recipe website, where I got to integrate APIs, databases, and
+        front-end frameworks to bring ideas to life. I’m always eager to learn,
+        experiment with new technologies, and take on challenges that push me to
+        grow as a developer.
+      </p>
+      <p>
+        At the core, I believe in writing clean, efficient code and constantly
+        improving my skills. Whether it’s developing mobile apps or dynamic web
+        platforms, I’m excited about building innovative solutions and making an
+        impact through technology.
       </p>
     </section>
 
@@ -88,15 +108,268 @@
       <h2>My Projects</h2>
       <div class="projects-container">
         <div class="projects-wrapper">
-          <div class="project">Project 1<br /><span>Description...</span></div>
-          <div class="project">Project 2<br /><span>Description...</span></div>
-          <div class="project">Project 3<br /><span>Description...</span></div>
-          <div class="project">Project 4<br /><span>Description...</span></div>
-          <div class="project">Project 5<br /><span>Description...</span></div>
-          <div class="project">Project 6<br /><span>Description...</span></div>
-          <div class="project">Project 7<br /><span>Description...</span></div>
-          <div class="project">Project 8<br /><span>Description...</span></div>
-          <div class="project">Project 9<br /><span>Description...</span></div>
+          <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/ecommerceServer.webp"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">E Commerce App Server</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/Airlink.webp"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">Airlink-UI</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/Recipewebapp.webp"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">Recipe Website</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/todo.webp"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">Mark It Done</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/Calculator.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">3D Calculator</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+              <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
     </section>

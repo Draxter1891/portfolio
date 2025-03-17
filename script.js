@@ -4,18 +4,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Toggle Mobile Menu
 function toggleMenu() {
+  console.log("button clicked")
   let nav = document.getElementById("mobile-nav");
   let hamburger = document.querySelector(".hamburger");
+
+  if (!nav || !hamburger) {
+    console.error("Navbar or hamburger element not found.");
+    return;
+  }
 
   nav.classList.toggle("active");
 
   // Change hamburger icon when toggling
-  if (nav.classList.contains("active")) {
-    hamburger.innerHTML = "✖"; // Close icon
-  } else {
-    hamburger.innerHTML = "☰"; // Menu icon
-  }
+hamburger.innerHTML = nav.classList.contains("active") ?  "✖" : "☰";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  let hamburger = document.querySelector(".hamburger");
+  if (hamburger) {
+    hamburger.addEventListener("click", toggleMenu);
+  }
+});
 
 // Contact Form Submission
 document
@@ -57,20 +66,33 @@ function sendMail() {
     });
 }
 
-// Project Auto-Scroll Function
-let index = 0;
+
+//Projects section
 const projectsWrapper = document.querySelector(".projects-wrapper");
-const totalProjects = document.querySelectorAll(".project").length;
-const projectsPerView = 3;
+let isDragging = false;
+let startX, scrollLeft;
 
-function autoScrollProjects() {
-  index++;
-  if (index > totalProjects - projectsPerView) {
-    index = 0;
-  }
-  let translateValue = -index * (100 / projectsPerView) + "%";
-  projectsWrapper.style.transform = "translateX(" + translateValue + ")";
-}
+projectsWrapper.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.pageX - projectsWrapper.offsetLeft;
+  scrollLeft = projectsWrapper.scrollLeft;
+  projectsWrapper.style.cursor = "grabbing"; // Visual feedback
+});
 
-// Run auto-scroll every 3 seconds
-setInterval(autoScrollProjects, 3000);
+projectsWrapper.addEventListener("mouseleave", () => {
+  isDragging = false;
+  projectsWrapper.style.cursor = "grab";
+});
+
+projectsWrapper.addEventListener("mouseup", () => {
+  isDragging = false;
+  projectsWrapper.style.cursor = "grab";
+});
+
+projectsWrapper.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - projectsWrapper.offsetLeft;
+  const walk = (x - startX) * 2; // Adjust speed
+  projectsWrapper.scrollLeft = scrollLeft - walk;
+});
